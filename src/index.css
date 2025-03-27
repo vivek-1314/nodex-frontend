@@ -1,0 +1,140 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'MyFont';
+  src: url('./assets/fonts/fonnts.com-Mona-Sans-RegularWide.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'MyFont2';
+  src: url('./assets/fonts/fonnts.com-Mona-Sans-LightWide.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'MyFont3';
+  src: url('./assets/fonts/fonnts.com-Mona-Sans-UltraLightWide.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'MyFont4';
+  src: url('./assets/fonts/fonnts.com-Mona-Sans-MediumWide.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'MyFont5';
+  src: url('./assets/fonts/HelveticaRoundedLTStd-Bd.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'MyFont6';
+  src: url('./assets/fonts/LufgaRegular.ttf') format('truetype');
+  font-weight: normal;  
+  font-style: normal;
+}
+@font-face {
+  font-family: 'MyFont7';
+  src: url('./assets/fonts/LufgaLight.ttf') format('truetype');
+  font-weight: normal;  
+  font-style: normal;
+}
+@font-face {
+  font-family: 'MyFont8';
+  src: url('./assets/fonts/LufgaMedium.ttf');
+}
+
+.name , .heading , .summary{
+  font-family: 'MyFont', sans-serif;
+}
+.navbar{
+  font-family: 'MyFont2', sans-serif;
+}
+.button{
+  font-family: 'MyFont3', sans-serif;
+}
+.font4{
+  font-family: 'MyFont4', sans-serif;
+}
+.font5{
+  font-family: 'MyFont5', sans-serif;
+}
+.font6{
+  font-family: 'MyFont6', sans-serif;
+}
+.font7{
+  font-family: 'MyFont7', sans-serif;
+}
+.font8{
+  font-family: 'MyFont8', sans-serif;
+}
+
+.m {  
+  &:before,
+  &:after {
+    position: absolute;
+    content: '';
+    width: 24px;
+    aspect-ratio: 1;
+  }
+  
+  &:before {
+    background-color: #dae0e6;
+    border-top-right-radius: 2rem;
+    box-shadow: 0.4rem -0.400rem #d0d7dc;
+    left: -24px;
+  }
+  
+  &:after {
+    background-color: #e1e2e6;
+    border-top-left-radius: 2rem;
+    box-shadow: -0.4rem -0.400rem #d0d7dc;
+    right: -24px;
+  }
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome, Safari */
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none; /* Hide scrollbar for IE/Edge */
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+}
+.shadow-custom-top {
+  box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.1), 0px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes bulletSnapIn {
+  0% { opacity: 0; transform: translate(80px, 0px); } /* Start far right */
+  70% { opacity: 1; transform: translate(-5px, 0px); } /* Slight overshoot */
+  100% { opacity: 1; transform: translate(0, 0); } /* Final position */
+}
+
+.animate-drop {
+  animation: bulletSnapIn 0.3s cubic-bezier(0.85, 0, 0.15, 1) forwards;
+}
+
+@keyframes fadeInDrop {
+  0% { opacity: 0; transform: translateY(50px); } /* Start higher */
+  100% { opacity: 1; transform: translateY(0); } /* Smoothly land */
+}
+
+.animate-fade-in {
+  animation: fadeInDrop 0.6s cubic-bezier(0.3, 0.5, 0.3, 1) forwards;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.animate-delay {
+  opacity: 0;
+  animation: fadeIn 0.8s ease-in forwards;
+  animation-delay: 2.4s; 
+}
+
