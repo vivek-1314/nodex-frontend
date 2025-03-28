@@ -12,7 +12,7 @@ const Connections = () => {
   useEffect(() => {
     if (!user || !userdetails) return;
     setFollowed(userdetails.followers || []);
-    console.log(userdetails.following);
+    // console.log(userdetails.following);
     setFollowing(userdetails.following || []);
   }, [userdetails]); 
 

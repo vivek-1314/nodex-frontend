@@ -55,7 +55,7 @@ const Signin = () => {
 
   return (
     <div className='h-screen flex justify-center items-center bg-cover w-full bg-gradient-to-r from-[#282F34] via-[#282F34] to-[#494C54] py-10'>
-            <div className="px-15 h-full border border-2 border-black  flex flex-col justify-start items-center bg-[#20252b] rounded-xl pt-3">
+            <div className="px-15 h-full border-2 border-black  flex flex-col justify-start items-center bg-[#20252b] rounded-xl pt-3">
                 <span className='font6 text-[1rem] bg-[#4285f4] text-white rounded-full px-3 py-[2px] '>Sign In</span>
                 <div className="w-full flex flex-col justify-between items-center gap-2 mt-8">
                     <img className='w-8 h-8' src="https://cdn-icons-png.freepik.com/256/18644/18644093.png?ga=GA1.1.771025357.1740120503&semt=ais_hybrid" alt="img" />

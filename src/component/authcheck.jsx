@@ -12,7 +12,7 @@ const AuthCheck = () => {
     useEffect(() => {
         const auth = getAuth();
         const unsubscribe = onAuthStateChanged(auth, (user) => {
-            console.log("Auth State Changed auth_check" , user) ;
+            // console.log("Auth State Changed auth_check" , user) ;
             setUser(user);
             setCheckingAuth(false); 
 

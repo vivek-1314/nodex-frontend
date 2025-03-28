@@ -78,7 +78,7 @@ const UserDetails = () => {
         if (!user) return; 
         try {
             const token = await auth.currentUser.getIdToken(true); 
-            console.log("token" , token) ;
+            // console.log("token" , token) ;
             const response = await axios.get(
                 `${import.meta.env.VITE_BASE_URL}/post/getposts`,
                 {

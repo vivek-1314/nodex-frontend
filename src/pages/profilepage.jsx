@@ -28,7 +28,7 @@ const profilepage = () => {
           const endTime = Date.now(); 
           const apiResponseTime = endTime - startTime; 
           setResponseTime(apiResponseTime);
-          console.log("response.data", response.data);
+          // console.log("response.data", response.data);
           setprofileuser(response.data);
           setFollowed(response.data.isFollowed);
           const delay = Math.max(2000 - apiResponseTime, 0);
@@ -62,7 +62,7 @@ const displaymessage = (message) => {
           { headers: { Authorization: `Bearer ${token}` } }
       );
       displaymessage(response.data.message) ;
-      console.log(response.data);
+      // console.log(response.data);
       setFollowed(true);
       } catch (error) {
         console.error("Error following user:", error);

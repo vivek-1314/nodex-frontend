@@ -31,7 +31,7 @@ const Nodes = () => {
             }
         );
     
-        console.log("new feed has come" , res.data.feed.length , res.data.feed);
+        // console.log("new feed has come" , res.data.feed.length , res.data.feed);
         if (res.data.feed.length > 0) {
             setPosts((prev) => [...prev, ...res.data.feed]); 
             setlastFollowedPostCreatedAt(res.data.newlastFollowedPostCreatedAt || lastFollowedPostCreatedAt) ;
@@ -51,7 +51,7 @@ useEffect(() => {
   const observer = new IntersectionObserver(
     (entries) => {
       if (entries[0].isIntersecting) {
-        console.log("Last post is visible! Fetching more...");
+        // console.log("Last post is visible! Fetching more...");
         fetchFeed();
       }
     },
@@ -148,7 +148,7 @@ const handlecomment = async () => {
       setcommenttext("");
       setcommentadding("Add") ;
     }, 3000);
-    console.log("comment added");
+    // console.log("comment added");
   } catch (error) {
     console.error("Error adding comment ", error);
   }

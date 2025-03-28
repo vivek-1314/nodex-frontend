@@ -14,6 +14,7 @@ import { auth } from "./firebase";
 import { FirebaseContext } from './context/firebasecontext';
 import NetworkStatus  from './component/networkstatus';
 import {useUser} from './context/usercontext'
+import Smallscreendetection from './component/smallscreendetection'
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
 
   return (
     <>
+    <Smallscreendetection />
     <NetworkStatus />
     <Routes>
       <Route path="/landingpage" element={<LandingPage />} />
